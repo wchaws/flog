@@ -31,14 +31,14 @@ release:
     name: flog
   name_template: '{{.Tag}}'
 
-brews:
-  - name: flog
-    github:
-      owner: mingrammer
-      name: homebrew-flog
-    commit_author:
-      name: mingrammer
-      email: mingrammer@gmail.com
-    homepage: https://github.com/mingrammer/flog
-    description: "A fake log generator for common log formats"
-    install: bin.install "flog"
+# brews:
+#   - name: flog
+#     github:
+#       owner: mingrammer
+#       name: homebrew-flog
+#     commit_author:
+#       name: mingrammer
+#       email: mingrammer@gmail.com
+#     homepage: https://github.com/mingrammer/flog
+#     description: "A fake log generator for common log formats"
+#     install: bin.install "flog"
