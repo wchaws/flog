@@ -27,7 +27,7 @@ archives:
 
 release:
   github:
-    owner: mingrammer
+    owner: wchaws
     name: flog
   name_template: '{{.Tag}}'
 
