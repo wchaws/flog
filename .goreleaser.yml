@@ -2,6 +2,8 @@ project_name: flog
 
 builds:
   - binary: flog
+    env:
+      - CGO_ENABLED=0
     goos:
       - windows
       - darwin
@@ -12,7 +14,7 @@ builds:
       - arm64
     goarm:
       - 6
-      # - 7
+      - 7
     ignore:
       - goos: windows
         goarch: arm
