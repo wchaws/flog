@@ -23,7 +23,7 @@ const (
 	CommonLogFormat = "%s - %s [%s] \"%s %s %s\" %d %d"
 	// JSONLogFormat : {"host": "{host}", "user-identifier": "{user-identifier}", "datetime": "{datetime}", "method": "{method}", "request": "{request}", "protocol": "{protocol}", "status", {status}, "bytes": {bytes}, "referer": "{referer}"}
 	JSONLogFormat = `{"host":"%s", "user-identifier":"%s", "time":"%s", "method": "%s", "request": "%s", "protocol":"%s", "status":%d, "bytes":%d, "referer": "%s"}`
-	JSONLogNK     = `{"level":"%s","logger":"gateway","message":"%s","app_name":"gateway","code":0,"file":"log.go:75","module_name":"gopkg.mihoyo.com/plat/kit/http/middleware","function":"Log.func1","hostname":"%s","env":"testing","request_id":"%s","method":"%s","url":"%s","status_code":%d,"content_length":%d,"user_agent":"%s","elapsed":%d,"remote_ip":"%s","client_ip":"%s"}`
+	JSONLogNK     = `{"level":"%s","time":"%s","logger":"gateway","message":"%s","app_name":"gateway","code":0,"file":"log.go:75","module_name":"gopkg.mihoyo.com/plat/kit/http/middleware","function":"Log.func1","hostname":"%s","env":"testing","request_id":"%s","method":"%s","url":"%s","status_code":%d,"content_length":%d,"user_agent":"%s","elapsed":%d,"remote_ip":"%s","client_ip":"%s"}`
 	LogNK         = `{"datetime":"%s", "body":"%s"}`
 )
 
@@ -138,6 +138,7 @@ func NewJSONLogNK(t time.Time, n uint) string {
 	return fmt.Sprintf(
 		JSONLogNK,
 		gofakeit.LogLevel("apache"),
+		t.Format(RFC5424),
 		gofakeit.LetterN(n*340),
 		gofakeit.IPv4Address(),
 		RandAuthUserID(),
