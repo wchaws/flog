@@ -15,8 +15,10 @@ case $ARCH in
     i686) ARCH="386";;
     i386) ARCH="386";;
 esac
+URL="https://${GITHUB_HOST}/wchaws/flog/releases/download/v${FLOG_VERSION}/flog_${FLOG_VERSION}_${OS}_${ARCH}.tar.gz"
 
-curl -LS "https://${GITHUB_HOST}/wchaws/flog/releases/download/v${FLOG_VERSION}/flog_${FLOG_VERSION}_${OS}_${ARCH}.tar.gz" -o /tmp/flog.tar.gz
+echo "Downloading flog from ${URL}"
+curl -SL ${URL} -o /tmp/flog.tar.gz
 cd /tmp
 tar -xvzf flog.tar.gz
 mv flog /usr/bin
