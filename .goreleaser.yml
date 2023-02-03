@@ -35,6 +35,7 @@ archives:
     files:
       - LICENSE
       - README.md
+      - get-flog.sh
 
 release:
   github:
