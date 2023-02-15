@@ -140,6 +140,10 @@ func NewLog(format string, t time.Time) string {
 		return NewJSONLogNK(t, 8)
 	case "waf":
 		return WAFFormat(t)
+	case "waf-alb":
+		return WAFALB(t)
+	case "waf-sql-ingestion":
+		return WAFSQLIngestion(t)
 	default:
 		return ""
 	}
