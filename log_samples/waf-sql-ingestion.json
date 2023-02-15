@@ -91,5 +91,13 @@
         "httpVersion": "%s",
         "httpMethod": "%s",
         "requestId": "%s"
-    }
+    },
+    "labels": [
+        {
+            "name": "awswaf:managed:aws:sql-database:SQLi_Body"
+        }
+    ],
+    "webaclName": "test-waf",
+    "host": "test-alb.us-east-1.elb.amazonaws.com",
+    "userAgent": "%s"
 }

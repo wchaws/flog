@@ -64,5 +64,8 @@
         "httpVersion": "%s",
         "httpMethod": "%s",
         "requestId": "%s"
-    }
+    },
+    "webaclName": "test-waf",
+    "host": "test-alb.us-east-1.elb.amazonaws.com",
+    "userAgent": "%s"
 }
