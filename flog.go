@@ -138,6 +138,8 @@ func NewLog(format string, t time.Time) string {
 		return NewJSONLogNK(t, 4)
 	case "8k":
 		return NewJSONLogNK(t, 8)
+	case "waf":
+		return WAFFormat(t)
 	default:
 		return ""
 	}

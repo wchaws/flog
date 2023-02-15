@@ -26,6 +26,7 @@ Options:
                            - rfc3164
                            - rfc5424
                            - json
+						   - waf
                            - 1k
                            - 2k
                            - 4k
@@ -49,7 +50,7 @@ Options:
   -l, --loop               loop output forever until killed.
 `
 
-var validFormats = []string{"apache_common", "apache_combined", "apache_error", "rfc3164", "rfc5424", "common_log", "json", "1k", "2k", "4k", "8k"}
+var validFormats = []string{"apache_common", "apache_combined", "apache_error", "rfc3164", "rfc5424", "common_log", "json", "1k", "2k", "4k", "8k", "waf"}
 var validTypes = []string{"stdout", "log", "gz"}
 
 // Option defines log generator options
