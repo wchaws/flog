@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/pflag"
 )
 
-const version = "0.4.3"
+const version = "v0.6.1-20230216"
 const usage = `flog is a fake log generator for common log formats
 
 Usage: flog [options]
