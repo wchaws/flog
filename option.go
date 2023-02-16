@@ -26,7 +26,9 @@ Options:
                            - rfc3164
                            - rfc5424
                            - json
-						   - waf
+                           - waf
+                           - waf-alb
+                           - waf-sql-ingestion
                            - 1k
                            - 2k
                            - 4k
