@@ -144,6 +144,8 @@ func NewLog(format string, t time.Time) string {
 		return WAFALB(t)
 	case "waf-sql-ingestion":
 		return WAFSQLIngestion(t)
+	case "waf-non-sql-ingestion":
+		return WAFNonSQLIngestion(t)
 	default:
 		return ""
 	}

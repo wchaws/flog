@@ -29,6 +29,7 @@ Options:
                            - waf
                            - waf-alb
                            - waf-sql-ingestion
+						   - waf-non-sql-ingestion
                            - 1k
                            - 2k
                            - 4k
@@ -52,7 +53,7 @@ Options:
   -l, --loop               loop output forever until killed.
 `
 
-var validFormats = []string{"apache_common", "apache_combined", "apache_error", "rfc3164", "rfc5424", "common_log", "json", "1k", "2k", "4k", "8k", "waf", "waf-alb", "waf-sql-ingestion"}
+var validFormats = []string{"apache_common", "apache_combined", "apache_error", "rfc3164", "rfc5424", "common_log", "json", "1k", "2k", "4k", "8k", "waf", "waf-alb", "waf-sql-ingestion", "waf-non-sql-ingestion"}
 var validTypes = []string{"stdout", "log", "gz"}
 
 // Option defines log generator options
