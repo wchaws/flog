@@ -141,11 +141,13 @@ func NewLog(format string, t time.Time) string {
 	case "waf":
 		return WAFFormat(t)
 	case "waf-alb":
-		return WAFALB(t)
+		return NewWAFALBLog(t)
 	case "waf-sql-ingestion":
-		return WAFSQLIngestion(t)
+		return NewWAFSQLIngestionLog(t)
 	case "waf-non-sql-ingestion":
-		return WAFNonSQLIngestion(t)
+		return NewWAFNonSQLIngestionLog(t)
+	case "cloudfront-realtime-log":
+		return NewCloudFrontRealTimeLog(t)
 	default:
 		return ""
 	}
