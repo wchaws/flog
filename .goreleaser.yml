@@ -20,6 +20,9 @@ builds:
         goarch: arm
       - goos: darwin
         goarch: arm64
+    ldflags:
+      - -X main.Version={{.Version}}
+      - -X main.Commit={{.Commit}}
 changelog:
   sort: asc
   filters:

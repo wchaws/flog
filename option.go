@@ -11,12 +11,15 @@ import (
 	"github.com/spf13/pflag"
 )
 
-const version = "v0.6.1-20230216"
+var Version string
+var Commit string
+
 const usage = `flog is a fake log generator for common log formats
 
 Usage: flog [options]
 
 Version: %s
+Commit: %s
 
 Options:
   -f, --format string      log format. available formats:
@@ -93,11 +96,11 @@ func init() {
 }
 
 func printUsage() {
-	fmt.Printf(usage, version)
+	fmt.Printf(usage, Version, Commit)
 }
 
 func printVersion() {
-	fmt.Printf("flog version %s\n", version)
+	fmt.Printf("flog version %s\n", Version)
 }
 
 func errorExit(err error) {
