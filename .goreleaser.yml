@@ -39,6 +39,12 @@ archives:
       - LICENSE
       - README.md
       - get-flog.sh
+  - format: tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
+    files:
+      - LICENSE
+      - README.md
+      - get-flog.sh
 
 release:
   github:
