@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
+# https://cdn.jsdelivr.net/gh/wchaws/flog/get-flog.sh
 set -e
 
 GITHUB_HOST=${GITHUB_HOST:-github.com}
-FLOG_VERSION=${FLOG_VERSION}
 OS=$(uname -s | tr '[:upper:]' '[:lower:]')
 ARCH=$(uname -m)
 case $ARCH in
@@ -15,10 +15,11 @@ case $ARCH in
     i686) ARCH="386";;
     i386) ARCH="386";;
 esac
-URL="https://${GITHUB_HOST}/wchaws/flog/releases/download/v${FLOG_VERSION}/flog_${FLOG_VERSION}_${OS}_${ARCH}.tar.gz"
+URL="https://${GITHUB_HOST}/wchaws/flog/releases/latest/download/flog_${OS}_${ARCH}.tar.gz"
 
 echo "Downloading flog from ${URL}"
 curl -SL ${URL} -o /tmp/flog.tar.gz
 cd /tmp
 tar -xvzf flog.tar.gz
-mv flog /usr/bin
+mv -v flog /usr/local/bin
+mv -v flog /usr/bin
