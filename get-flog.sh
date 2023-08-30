@@ -21,5 +21,5 @@ echo "Downloading flog from ${URL}"
 curl -SL ${URL} -o /tmp/flog.tar.gz
 cd /tmp
 tar -xvzf flog.tar.gz
-mv -v flog /usr/local/bin
-mv -v flog /usr/bin
+cp -v flog /usr/local/bin
+cp -v flog /usr/bin
