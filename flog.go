@@ -148,6 +148,8 @@ func NewLog(format string, t time.Time) string {
 		return NewWAFNonSQLIngestionLog(t)
 	case "cloudfront-realtime-log":
 		return NewCloudFrontRealTimeLog(t)
+	case "nested-json":
+		return NewNestedJSON(t)
 	default:
 		return ""
 	}

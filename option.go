@@ -38,6 +38,7 @@ Options:
                            - 2k
                            - 4k
                            - 8k
+                           - nested-json
   -o, --output string      output filename. Path-like is allowed. (default "generated.log")
   -t, --type string        log output type. available types:
                            - stdout (default)
@@ -74,6 +75,7 @@ var validFormats = []string{
 	"waf-sql-ingestion",
 	"waf-non-sql-ingestion",
 	"cloudfront-realtime-log",
+	"nested-json",
 }
 var validTypes = []string{"stdout", "log", "gz"}
 
