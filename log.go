@@ -38,9 +38,9 @@ const (
 func NewNestedJSON(t time.Time) string {
 	return fmt.Sprintf(
 		NestedJSON,
-		t.Format(RFC5424),
+		t.UTC().Format(RFC5424),
 		gofakeit.Uint64(),
-		t.Format(RFC5424),
+		t.UTC().Format(RFC5424),
 		gofakeit.UUID(),
 		gofakeit.URL(),
 		gofakeit.Number(0, 1000),
