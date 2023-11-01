@@ -26,6 +26,7 @@ function mksvc() {
     local name="$1"
     local cmd="$2"
 
+    echo "mksvc ${name}"
     echo "$(systemd_conf "${name}" "${cmd}")" > /etc/systemd/system/${name}.service
     systemctl enable ${name}.service
     systemctl start ${name}.service
