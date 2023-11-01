@@ -10,7 +10,7 @@ It is useful for testing some tasks which require log data like amazon kinesis l
 
 ## Installation
 
-### 在 EC2 安装日志各种类型的日志发生器 systemd 服务
+### 在 EC2 安装日志各种类型的日志发生器 systemd 服务（支持 CN 网络环境）
 
 ```
 sudo su
