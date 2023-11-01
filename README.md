@@ -10,6 +10,35 @@ It is useful for testing some tasks which require log data like amazon kinesis l
 
 ## Installation
 
+### 在 EC2 安装日志各种类型的日志发生器 systemd 服务
+
+```
+sudo su
+curl -fsSL https://ghproxy.com/https://github.com/wchaws/flog/blob/master/start-flog-svc.sh | bash
+```
+
+查看日志发生器服务
+
+```
+systemctl status "flog*"
+```
+
+日志产生目录
+
+```
+/var/log/apache/*.log
+/var/log/json/*.log
+/var/log/nested-json/*.log
+/var/log/nginx/*.log
+```
+
+如果遇到 `cp: cannot create regular file ‘/usr/bin/flog’: Text file busy` 请先执行以下命令停止 flog systemd 服务后再执行 `start-flog-svc.sh`
+
+```
+systemctl stop "flog*"
+```
+
+
 ### Using go get
 
 ```bash
