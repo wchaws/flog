@@ -32,6 +32,6 @@ function mksvc() {
 }
 
 mksvc flog-json "mkdir -p /var/log/json/ && flog -f json -d 2s -l > /var/log/json/access.log"
-mksvc flog-json "mkdir -p /var/log/json/ && flog -f nested-json -d 2s -l > /var/log/nested-json/access.log"
+mksvc flog-nested-json "mkdir -p /var/log/json/ && flog -f nested-json -d 2s -l > /var/log/nested-json/access.log"
 mksvc flog-nginx "mkdir -p /var/log/nginx/ && flog -d 2s -l | sed -u -e 's/$/ \\\"-\\\" \\\"curl\/7.79.1\\\" \\\"-\\\"/' > /var/log/nginx/flog-nginx.log"
 mksvc flog-apache 'mkdir -p /var/log/apache/ && flog -f apache_common -d 2s -l > /var/log/apache/access.log'
