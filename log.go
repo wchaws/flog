@@ -207,14 +207,14 @@ func NewWAFALBLog(t time.Time) string {
 	return fmt.Sprintf(
 		WAFALBLog,
 		t.UnixMilli(),
-		gofakeit.IPv4Address(),
-		gofakeit.CountryAbr(),
-		gofakeit.UserAgent(),
-		RandResourceURI(),
+		'$ip',
+		'$country',
+		'$agent',
+		'$resourceURI',
 		RandHTTPVersion(),
 		gofakeit.HTTPMethod(),
-		gofakeit.UUID(),
-		gofakeit.UserAgent(),
+		'$UUID',
+		'$userAgent',
 	)
 }
 
@@ -224,14 +224,14 @@ func NewWAFSQLIngestionLog(t time.Time) string {
 	return fmt.Sprintf(
 		WAFALBSQLIngestionLog,
 		t.UnixMilli(),
-		gofakeit.IPv4Address(),
-		gofakeit.CountryAbr(),
-		gofakeit.UserAgent(),
-		RandResourceURI(),
+		'$ip',
+		'$country',
+		'$agent',
+		'$resourceURI',
 		RandHTTPVersion(),
 		gofakeit.HTTPMethod(),
-		gofakeit.UUID(),
-		gofakeit.UserAgent(),
+		'$UUID',
+		'$userAgent',
 	)
 }
 
@@ -241,12 +241,12 @@ func NewWAFNonSQLIngestionLog(t time.Time) string {
 	return fmt.Sprintf(
 		WAFNonSQLIngestionLog,
 		t.UnixMilli(),
-		gofakeit.IPv4Address(),
-		gofakeit.CountryAbr(),
-		gofakeit.UserAgent(),
-		RandResourceURI(),
+		'$ip',
+		'$country',
+		'$agent',
+		'$resourceURI',
 		RandHTTPVersion(),
-		gofakeit.UserAgent(),
+		'$userAgent',
 	)
 }
 
