@@ -2,7 +2,8 @@ name: Build
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize, closed]
+    branches:
+      - master
   workflow_dispatch: {}
 
 jobs:
