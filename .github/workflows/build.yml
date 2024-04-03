@@ -1,7 +1,8 @@
 name: Build
 
 on:
-  pull_request: {}
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
   workflow_dispatch: {}
 
 jobs:
