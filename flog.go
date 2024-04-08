@@ -133,13 +133,13 @@ func NewLog(format string, t time.Time) string {
 	case "0.5k":
 		return NewJSONLogNK(t, 1)
 	case "1k":
-		return NewJSONLogNK(t, 2)
-	case "2k":
 		return NewJSONLogNK(t, 4)
+	case "2k":
+		return NewJSONLogNK(t, 10)
 	case "4k":
-		return NewJSONLogNK(t, 8)
+		return NewJSONLogNK(t, 22)
 	case "8k":
-		return NewJSONLogNK(t, 16)
+		return NewJSONLogNK(t, 46)
 	case "waf":
 		return WAFFormat(t)
 	case "waf-alb":
