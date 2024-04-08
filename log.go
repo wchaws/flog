@@ -164,7 +164,7 @@ func NewJSONLogNK(t time.Time, n uint) string {
 		no,
 		gofakeit.LogLevel("apache"),
 		t.Format(RFC5424),
-		gofakeit.LetterN(n*340),
+		gofakeit.LetterN(n*170),
 		gofakeit.IPv4Address(),
 		RandAuthUserID(),
 		gofakeit.HTTPMethod(),

@@ -34,6 +34,7 @@ Options:
                            - waf-sql-ingestion
                            - waf-non-sql-ingestion
                            - cloudfront-realtime-log
+						   - 0.5k
                            - 1k
                            - 2k
                            - 4k
@@ -66,6 +67,7 @@ var validFormats = []string{
 	"rfc5424",
 	"common_log",
 	"json",
+	"0.5k",
 	"1k",
 	"2k",
 	"4k",
